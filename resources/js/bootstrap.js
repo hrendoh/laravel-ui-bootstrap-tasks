@@ -39,3 +39,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+
+/**
+ * Import moment js
+ */
+import moment from 'moment';
+window.moment = moment;
+
+require('tempusdominus-bootstrap-4');
+$('.datetimepicker').datetimepicker({
+  icons: {
+    // FontAwesomにfa-clock-oはなくなっているので指定する
+    time: 'far fa-clock'
+  },
+  format: 'YYYY-MM-DD'
+});
